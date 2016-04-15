@@ -37,7 +37,7 @@ setup(
                  'ocs_xml'},
     include_package_data=True,
     install_requires=requirements,
-    license="BSD",
+    license="GPL",
     zip_safe=False,
     keywords='ocs_xml',
     classifiers=[

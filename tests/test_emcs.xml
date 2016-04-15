@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T09:20:21.345" OnError="Abort">
+ <ocs:calibrationCommandSequence>
+
+  <!-- emcsVisASCamOn command test -->
+  <ocs:emcsVisASCamOn Subsystem="VisibleAllSkyCamera" WaitForCompletion="true"/>
+
+  <!-- emcsVisASCamOff command test -->
+  <ocs:emcsVisASCamOff Subsystem="VisibleAllSkyCamera" WaitForCompletion="true"/>
+
+  <!-- emcsIRASCamOn command test -->
+  <ocs:emcsIRASCamOn Subsystem="InfraRedAllSkyCamera" WaitForCompletion="true"/>
+
+  <!-- emcsIRASCamOff command test -->
+  <ocs:emcsIRASCamOff Subsystem="InfraRedAllSkyCamera" WaitForCompletion="true"/>
+
+ </ocs:calibrationCommandSequence>
+</ocs:ocsCommandSequence>

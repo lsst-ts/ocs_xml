@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T09:20:21.345" OnError="Abort">
+ <ocs:calibrationCommandSequence>
+
+  <!-- cbpcsOn command test -->
+  <ocs:cbpcsOn Subsystem="CollimatedBeamProjector" WaitForCompletion="true" />
+
+  <!-- cbpcsOff command test -->
+  <ocs:cbpcsOff Subsystem="CollimatedBeamProjector" WaitForCompletion="true" />
+
+  <!-- cbpcsShutter command test -->
+  <ocs:cbpcsShutter Subsystem="CollimatedBeamProjector" WaitForCompletion="true">
+   <ocs:State>Open</ocs:State>
+  </ocs:cbpcsShutter>
+
+  <!-- cbpcsShutter command test -->
+  <ocs:cbpcsShutter Subsystem="CollimatedBeamProjector" WaitForCompletion="true">
+   <ocs:State>Closed</ocs:State>
+  </ocs:cbpcsShutter>
+
+  <!-- cbpcsMaskWheel command test -->
+  <ocs:cbpcsMaskWheel Subsystem="CollimatedBeamProjector" WaitForCompletion="true">
+   <ocs:Name>MaskWheelNumber3</ocs:Name>
+  </ocs:cbpcsMaskWheel>
+
+  <!-- cbpcsStage command test -->
+  <ocs:cbpcsStage Subsystem="CollimatedBeamProjector" WaitForCompletion="true">
+   <ocs:Tip>13.5</ocs:Tip>
+   <ocs:Tilt>29.6</ocs:Tilt>
+   <ocs:Focus>98.9</ocs:Focus>
+  </ocs:cbpcsStage>
+
+  <!-- cbpcsMount command test -->
+  <ocs:cbpcsMount Subsystem="CollimatedBeamProjector" WaitForCompletion="true">
+   <ocs:Altitude>45.5</ocs:Altitude>
+   <ocs:Azimuth>-111.6</ocs:Azimuth>
+  </ocs:cbpcsMount>
+
+ </ocs:calibrationCommandSequence>
+</ocs:ocsCommandSequence>

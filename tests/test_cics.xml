@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T09:20:21.345" OnError="Abort">
+ <ocs:calibrationCommandSequence>
+
+  <!-- cicsLaserLightOff command test -->
+  <ocs:cicsLaserLightOff Subsystem="CalibrationScreen" WaitForCompletion="true">
+   <ocs:Source>LaserSourceA</ocs:Source>
+  </ocs:cicsLaserLightOff>
+
+  <!-- cicsLaserLightOn command test -->
+  <ocs:cicsLaserLightOn Subsystem="CalibrationScreen" WaitForCompletion="true">
+   <ocs:Source>LaserSourceA</ocs:Source>
+  </ocs:cicsLaserLightOn>
+
+  <!-- cicsWhiteLightOff command test -->
+  <ocs:cicsWhiteLightOff Subsystem="CalibrationScreen" WaitForCompletion="true"/>
+
+  <!-- cicsWhiteLightOn command test -->
+  <ocs:cicsWhiteLightOn Subsystem="CalibrationScreen" WaitForCompletion="true"/>
+
+  <!-- cicsLaserLight command test -->
+  <ocs:cicsLaserLight Subsystem="CalibrationScreen" WaitForCompletion="true">
+   <ocs:Source>LaserSourceA</ocs:Source>
+  </ocs:cicsLaserLight>
+
+  <!-- cicsWhiteLight command test -->
+  <ocs:cicsWhiteLight Subsystem="CalibrationScreen" WaitForCompletion="true">
+   <ocs:Source>WhiteSourceA</ocs:Source>
+   <ocs:Intensity>75.0</ocs:Intensity>
+   <ocs:BeamBlock>true</ocs:BeamBlock>
+  </ocs:cicsWhiteLight>
+
+  <!-- cicsLightControl command test -->
+  <ocs:cicsLightControl Subsystem="CalibrationScreen" WaitForCompletion="true">
+   <ocs:Source>Laser</ocs:Source>
+   <ocs:Position>Screen</ocs:Position>
+   <ocs:Shutter>true</ocs:Shutter>
+  </ocs:cicsLightControl>
+
+ </ocs:calibrationCommandSequence>
+</ocs:ocsCommandSequence>

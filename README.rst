@@ -11,8 +11,8 @@ OCS XML
 
 OCS XML code and test
 
-* Free software: BSD license
-* Documentation: https://ocs_xml.readthedocs.org.
+* Free software: GPL license
+* Documentation: None (as yet)
 
 Features
 --------

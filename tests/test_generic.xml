@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T08:40:51.678" OnError="Continue">
+
+ <ocs:genericCommandSequence>
+
+  <!-- abort command test -->
+  <ocs:abort Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- disable command test -->
+  <ocs:disable Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- enable command test -->
+  <ocs:enable Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- entercontrol command test -->
+  <ocs:entercontrol Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- exitcontrol command test -->
+  <ocs:exitcontrol Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- setValue command test -->
+  <ocs:setvalue Subsystem="Camera" WaitForCompletion="true">
+   <ocs:Parameter>MyParameter</ocs:Parameter>
+   <ocs:Value>MyValue</ocs:Value>
+  </ocs:setvalue>
+
+  <!-- standy command test -->
+  <ocs:standby Subsystem="Camera" WaitForCompletion="true"/>
+
+  <!-- start command test -->
+  <ocs:start Subsystem="Camera" WaitForCompletion="true">
+   <ocs:StartId>CameraConfig</ocs:StartId>
+  </ocs:start>
+
+  <!-- stop command test -->
+  <ocs:stop Subsystem="Camera" WaitForCompletion="true">
+   <ocs:Device>camera</ocs:Device>
+  </ocs:stop>
+
+ </ocs:genericCommandSequence>
+</ocs:ocsCommandSequence>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T08:40:51.678" OnError="Continue">
+
+ <!-- one way of doing it -->
+ <ocs:genericCommandSequence>
+
+  <!-- entercontrol command test -->
+  <ocs:entercontrol Subsystem="AuxiliaryMount" WaitForCompletion="false"/>
+  <ocs:entercontrol Subsystem="Camera" WaitForCompletion="false"/>
+  <ocs:entercontrol Subsystem="LSSTMount" WaitForCompletion="false"/>
+  <!-- synchronization point: TBD -->
+
+  <!-- start command test -->
+  <ocs:start Subsystem="AuxiliaryMount" WaitForCompletion="false">
+   <ocs:StartId>AuxiliaryMountCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:start Subsystem="Camera" WaitForCompletion="false">
+   <ocs:StartId>CameraCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:start Subsystem="LSSTMount" WaitForCompletion="false">
+   <ocs:StartId>LSSTMount</ocs:StartId>
+  </ocs:start>
+  <!-- synchronization point: TBD -->
+
+  <!-- enable command test -->
+  <ocs:enable Subsystem="AuxiliaryMount" WaitForCompletion="false"/>
+  <ocs:enable Subsystem="Camera" WaitForCompletion="false"/>
+  <ocs:enable Subsystem="LSSTMount" WaitForCompletion="false"/>
+  <!-- synchronization point: TBD -->
+
+ </ocs:genericCommandSequence>
+
+ <!-- another way of doing it -->
+ <ocs:genericCommandSequence>
+
+  <!-- entercontrol, start and enable command test -->
+  <ocs:entercontrol Subsystem="Archiver" WaitForCompletion="true"/>
+  <ocs:start Subsystem="Archiver" WaitForCompletion="true">
+   <ocs:StartId>ArchiverCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:enable Subsystem="Archiver" WaitForCompletion="true"/>
+
+  <!-- entercontrol, start and enable command test -->
+  <ocs:entercontrol Subsystem="CatchupArchiver" WaitForCompletion="true"/>
+  <ocs:start Subsystem="CatchupArchiver" WaitForCompletion="true">
+   <ocs:StartId>CatchupArchiverCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:enable Subsystem="CatchupArchiver" WaitForCompletion="true"/>
+
+  <!-- entercontrol, start and enable command test -->
+  <ocs:entercontrol Subsystem="ProcessingCluster" WaitForCompletion="true"/>
+  <ocs:start Subsystem="ProcessingCluster" WaitForCompletion="true">
+   <ocs:StartId>ProcessingClusterCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:enable Subsystem="ProcessingCluster" WaitForCompletion="true"/>
+
+  <!-- entercontrol, start and enable command test -->
+  <ocs:entercontrol Subsystem="EFDReplicator" WaitForCompletion="true"/>
+  <ocs:start Subsystem="EFDReplicator" WaitForCompletion="true">
+   <ocs:StartId>EFDReplicatorCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:enable Subsystem="EFDReplicator" WaitForCompletion="true"/>
+
+  <!-- entercontrol, start and enable command test -->
+  <ocs:entercontrol Subsystem="CalibrationGenerator" WaitForCompletion="true"/>
+  <ocs:start Subsystem="CalibrationGenerator" WaitForCompletion="true">
+   <ocs:StartId>CalibrationGeneratorCfg</ocs:StartId>
+  </ocs:start>
+  <ocs:enable Subsystem="CalibrationGenerator" WaitForCompletion="true"/>
+
+ </ocs:genericCommandSequence>
+</ocs:ocsCommandSequence>
