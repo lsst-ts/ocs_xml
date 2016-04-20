@@ -20,6 +20,7 @@ class TestOcs_xml(unittest.TestCase):
     def setUp(self):
 
         # get path to schema
+        # (assumes you are in the directory where you would issue a "make test")
         self.xsdf = ''.join(os.getcwd()+'/ocs_xml/ocs.xsd')
         self.xsde = os.path.isfile(self.xsdf)
         sys.stdout.write('\nFinding schema '+self.xsdf+' ... '+('OK\n' if self.xsde else 'ERROR\n'))
@@ -27,6 +28,7 @@ class TestOcs_xml(unittest.TestCase):
         self.assertTrue(self.xsde)
 
         # get paths to xml test files
+        # (assumes you are in the directory where you would issue a "make test")
         self.xmlf = ''.join(os.getcwd()+'/tests/*.xml')
         sys.stdout.write('\nGlobbing on '+self.xmlf+' ... '+('OK\n' if isinstance(self.xmlf,str) else 'ERROR\n'))
         sys.stdout.flush()
