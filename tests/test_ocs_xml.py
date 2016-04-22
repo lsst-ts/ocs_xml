@@ -43,6 +43,14 @@ class TestOcs_xml(unittest.TestCase):
         # get parser based upon schema
         self.parser = ocs_xml.get_parser(self.xsdf)
 
+        # informational output
+        sys.stdout.write('self.xsdf   = ' + str(self.xsdf) + '\n')
+        sys.stdout.write('self.xsde   = ' + str(self.xsde) + '\n')
+        sys.stdout.write('self.xmlf   = ' + str(self.xmlf) + '\n')
+        sys.stdout.write('self.xmll   = ' + str(self.xmll) + '\n')
+        sys.stdout.write('self.parser = ' + str(self.parser) + '\n')
+        sys.stdout.flush()
+
     def test_ocs_xml(self):
 
         # loop around all xml test files for validation
