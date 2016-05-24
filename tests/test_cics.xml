@@ -3,35 +3,35 @@
  <ocs:calibrationCommandSequence>
 
   <!-- cicsLaserLightOff command test -->
-  <ocs:cicsLaserLightOff Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cicsLaserLightOff Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Source>LaserSourceA</ocs:Source>
   </ocs:cicsLaserLightOff>
 
   <!-- cicsLaserLightOn command test -->
-  <ocs:cicsLaserLightOn Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cicsLaserLightOn Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Source>LaserSourceA</ocs:Source>
   </ocs:cicsLaserLightOn>
 
   <!-- cicsWhiteLightOff command test -->
-  <ocs:cicsWhiteLightOff Subsystem="CalibrationScreen" WaitForCompletion="true"/>
+  <ocs:cicsWhiteLightOff Entity="CalibrationScreen" WaitForCompletion="true"/>
 
   <!-- cicsWhiteLightOn command test -->
-  <ocs:cicsWhiteLightOn Subsystem="CalibrationScreen" WaitForCompletion="true"/>
+  <ocs:cicsWhiteLightOn Entity="CalibrationScreen" WaitForCompletion="true"/>
 
   <!-- cicsLaserLight command test -->
-  <ocs:cicsLaserLight Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cicsLaserLight Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Source>LaserSourceA</ocs:Source>
   </ocs:cicsLaserLight>
 
   <!-- cicsWhiteLight command test -->
-  <ocs:cicsWhiteLight Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cicsWhiteLight Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Source>WhiteSourceA</ocs:Source>
    <ocs:Intensity>75.0</ocs:Intensity>
    <ocs:BeamBlock>true</ocs:BeamBlock>
   </ocs:cicsWhiteLight>
 
   <!-- cicsLightControl command test -->
-  <ocs:cicsLightControl Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cicsLightControl Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Source>Laser</ocs:Source>
    <ocs:Position>Screen</ocs:Position>
    <ocs:Shutter>true</ocs:Shutter>

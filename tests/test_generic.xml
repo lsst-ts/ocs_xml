@@ -4,36 +4,36 @@
  <ocs:genericCommandSequence>
 
   <!-- abort command test -->
-  <ocs:abort Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:abort Entity="Camera" WaitForCompletion="true"/>
 
   <!-- disable command test -->
-  <ocs:disable Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:disable Entity="Camera" WaitForCompletion="true"/>
 
   <!-- enable command test -->
-  <ocs:enable Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:enable Entity="Camera" WaitForCompletion="true"/>
 
   <!-- entercontrol command test -->
-  <ocs:entercontrol Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:entercontrol Entity="Camera" WaitForCompletion="true"/>
 
   <!-- exitcontrol command test -->
-  <ocs:exitcontrol Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="Camera" WaitForCompletion="true"/>
 
   <!-- setValue command test -->
-  <ocs:setvalue Subsystem="Camera" WaitForCompletion="true">
+  <ocs:setvalue Entity="Camera" WaitForCompletion="true">
    <ocs:Parameter>MyParameter</ocs:Parameter>
    <ocs:Value>MyValue</ocs:Value>
   </ocs:setvalue>
 
   <!-- standy command test -->
-  <ocs:standby Subsystem="Camera" WaitForCompletion="true"/>
+  <ocs:standby Entity="Camera" WaitForCompletion="true"/>
 
   <!-- start command test -->
-  <ocs:start Subsystem="Camera" WaitForCompletion="true">
+  <ocs:start Entity="Camera" WaitForCompletion="true">
    <ocs:StartId>CameraConfig</ocs:StartId>
   </ocs:start>
 
   <!-- stop command test -->
-  <ocs:stop Subsystem="Camera" WaitForCompletion="true">
+  <ocs:stop Entity="Camera" WaitForCompletion="true">
    <ocs:Device>camera</ocs:Device>
   </ocs:stop>
 

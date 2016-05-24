@@ -3,32 +3,32 @@
 
  <!-- ccsInitGuiders -->
  <ocs:cameraCommandSequence>
-  <ocs:ccsInitGuiders Subsystem="Camera" WaitForCompletion="true" RecordID="1">
+  <ocs:ccsInitGuiders Entity="Camera" WaitForCompletion="true" RecordID="1">
    <ocs:RoiSpec>CcsRoiSpec</ocs:RoiSpec>
   </ocs:ccsInitGuiders>
  </ocs:cameraCommandSequence>
 
  <!-- tcsTarget (rotator=0.0) -->
  <ocs:telescopeCommandSequence>
-  <ocs:tcsTarget Subsystem="LSST" WaitForCompletion="true" RecordID="2">
+  <ocs:tcsTarget Entity="LSST" WaitForCompletion="true" RecordID="2">
    <ocs:Rotator>0.0</ocs:Rotator>
   </ocs:tcsTarget>
  </ocs:telescopeCommandSequence>
 
  <!-- ccsSetFilter -->
  <ocs:cameraCommandSequence>
-  <ocs:ccsSetFilter Subsystem="Camera" WaitForCompletion="true" RecordID="3">
+  <ocs:ccsSetFilter Entity="Camera" WaitForCompletion="true" RecordID="3">
    <ocs:Name>u</ocs:Name>
   </ocs:ccsSetFilter>
 
-  <ocs:ccsInitImage Subsystem="Camera" WaitForCompletion="true" RecordID="4">
+  <ocs:ccsInitImage Entity="Camera" WaitForCompletion="true" RecordID="4">
    <ocs:DeltaTime>15.5</ocs:DeltaTime>
   </ocs:ccsInitImage>
  </ocs:cameraCommandSequence>
 
  <!-- tcsTarget -->
  <ocs:telescopeCommandSequence>
-  <ocs:tcsTarget Subsystem="LSST" WaitForCompletion="true" RecordID="5">
+  <ocs:tcsTarget Entity="LSST" WaitForCompletion="true" RecordID="5">
    <ocs:J2000>
     <ocs:RightAscension>23:59:59.999</ocs:RightAscension>
     <ocs:Declination>-35:59:15.400</ocs:Declination>
@@ -45,7 +45,7 @@
 
  <!-- ccsTakeImages -->
  <ocs:cameraCommandSequence>
-  <ocs:ccsTakeImages Subsystem="Camera" WaitForCompletion="true" RecordID="6">
+  <ocs:ccsTakeImages Entity="Camera" WaitForCompletion="true" RecordID="6">
    <ocs:NumberOfImages>2</ocs:NumberOfImages>
    <ocs:ExposureTime>15.0</ocs:ExposureTime>
    <ocs:ShutterCondition>true</ocs:ShutterCondition>

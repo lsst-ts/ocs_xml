@@ -5,21 +5,21 @@
  <ocs:genericCommandSequence>
 
   <!-- disable command test -->
-  <ocs:disable Subsystem="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:disable Subsystem="Camera" WaitForCompletion="false"/>
-  <ocs:disable Subsystem="LSSTMount" WaitForCompletion="false"/>
+  <ocs:disable Entity="AuxiliaryMount" WaitForCompletion="false"/>
+  <ocs:disable Entity="Camera" WaitForCompletion="false"/>
+  <ocs:disable Entity="LSSTMount" WaitForCompletion="false"/>
   <!-- synchronization point: TBD -->
 
   <!-- standby command test -->
-  <ocs:standby Subsystem="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:standby Subsystem="Camera" WaitForCompletion="false"/>
-  <ocs:standby Subsystem="LSSTMount" WaitForCompletion="false"/>
+  <ocs:standby Entity="AuxiliaryMount" WaitForCompletion="false"/>
+  <ocs:standby Entity="Camera" WaitForCompletion="false"/>
+  <ocs:standby Entity="LSSTMount" WaitForCompletion="false"/>
   <!-- synchronization point: TBD -->
 
   <!-- exit control command test -->
-  <ocs:exitcontrol Subsystem="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:exitcontrol Subsystem="Camera" WaitForCompletion="false"/>
-  <ocs:exitcontrol Subsystem="LSSTMount" WaitForCompletion="false"/>
+  <ocs:exitcontrol Entity="AuxiliaryMount" WaitForCompletion="false"/>
+  <ocs:exitcontrol Entity="Camera" WaitForCompletion="false"/>
+  <ocs:exitcontrol Entity="LSSTMount" WaitForCompletion="false"/>
 
  </ocs:genericCommandSequence>
 
@@ -27,29 +27,29 @@
  <ocs:genericCommandSequence>
 
   <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Subsystem="Archiver" WaitForCompletion="true"/>
-  <ocs:standby Subsystem="Archiver" WaitForCompletion="true"/>
-  <ocs:exitcontrol Subsystem="Archiver" WaitForCompletion="true"/>
+  <ocs:disable Entity="Archiver" WaitForCompletion="true"/>
+  <ocs:standby Entity="Archiver" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="Archiver" WaitForCompletion="true"/>
 
   <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Subsystem="CatchupArchiver" WaitForCompletion="true"/>
-  <ocs:standby Subsystem="CatchupArchiver" WaitForCompletion="true"/>
-  <ocs:exitcontrol Subsystem="CatchupArchiver" WaitForCompletion="true"/>
+  <ocs:disable Entity="CatchupArchiver" WaitForCompletion="true"/>
+  <ocs:standby Entity="CatchupArchiver" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="CatchupArchiver" WaitForCompletion="true"/>
 
   <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Subsystem="ProcessingCluster" WaitForCompletion="true"/>
-  <ocs:standby Subsystem="ProcessingCluster" WaitForCompletion="true"/>
-  <ocs:exitcontrol Subsystem="ProcessingCluster" WaitForCompletion="true"/>
+  <ocs:disable Entity="ProcessingCluster" WaitForCompletion="true"/>
+  <ocs:standby Entity="ProcessingCluster" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="ProcessingCluster" WaitForCompletion="true"/>
 
   <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Subsystem="EFDReplicator" WaitForCompletion="true"/>
-  <ocs:standby Subsystem="EFDReplicator" WaitForCompletion="true"/>
-  <ocs:exitcontrol Subsystem="EFDReplicator" WaitForCompletion="true"/>
+  <ocs:disable Entity="EFDReplicator" WaitForCompletion="true"/>
+  <ocs:standby Entity="EFDReplicator" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="EFDReplicator" WaitForCompletion="true"/>
 
   <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Subsystem="CalibrationGenerator" WaitForCompletion="true"/>
-  <ocs:standby Subsystem="CalibrationGenerator" WaitForCompletion="true"/>
-  <ocs:exitcontrol Subsystem="CalibrationGenerator" WaitForCompletion="true"/>
+  <ocs:disable Entity="CalibrationGenerator" WaitForCompletion="true"/>
+  <ocs:standby Entity="CalibrationGenerator" WaitForCompletion="true"/>
+  <ocs:exitcontrol Entity="CalibrationGenerator" WaitForCompletion="true"/>
 
  </ocs:genericCommandSequence>
 </ocs:ocsCommandSequence>

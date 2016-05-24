@@ -423,91 +423,91 @@
 
  <!--
   #+
-  #  Section 2: Subsystems
+  #  Section 2: Entitys
   #-
  -->
 
- <!-- Subsystems (patterns) -->
+ <!-- Entitys (patterns) -->
 
  <simpleType id="AuxiliaryEnclosure_e" name="AuxiliaryEnclosure_e">
-  <annotation> <documentation> auxiliary enclosure subsystem </documentation> </annotation>
+  <annotation> <documentation> auxiliary enclosure entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Uu][Xx][Ii][Ll][Ii][Aa][Rr][Yy][Ee][Nn][Cc][Ll][Oo][Ss][Uu][Rr][Ee]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="AuxiliaryMount_e" name="AuxiliaryMount_e">
-  <annotation> <documentation> auxiliary mount subsystem </documentation> </annotation>
+  <annotation> <documentation> auxiliary mount entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Uu][Xx][Ii][Ll][Ii][Aa][Rr][Yy][Mm][Oo][Uu][Nn][Tt]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="AuxiliaryImager_e" name="AuxiliaryImager_e">
-  <annotation> <documentation> auxiliary imager subsystem </documentation> </annotation>
+  <annotation> <documentation> auxiliary imager entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Uu][Xx][Ii][Ll][Ii][Aa][Rr][Yy][Ii][Mm][Aa][Gg][Ee][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="AuxiliarySpectrograph_e" name="AuxiliarySpectrograph_e">
-  <annotation> <documentation> auxiliary spectrograph subsystem </documentation> </annotation>
+  <annotation> <documentation> auxiliary spectrograph entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Uu][Xx][Ii][Ll][Ii][Aa][Rr][Yy][Ss][Pp][Ee][Cc][Tt][Rr][Oo][Gg][Rr][Aa][Pp][Hh]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CalibrationScreen_e" name="CalibrationScreen_e">
-  <annotation> <documentation> calibration screen subsystem </documentation> </annotation>
+  <annotation> <documentation> calibration screen entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Ii][Bb][Rr][Aa][Tt][Ii][Oo][Nn][Ss][Cc][Rr][Ee][Ee][Nn]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CalibrationIllumination_e" name="CalibrationIllumination_e">
-  <annotation> <documentation> calibration illumination subsystem </documentation> </annotation>
+  <annotation> <documentation> calibration illumination entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Ii][Bb][Rr][Aa][Tt][Ii][Oo][Nn][Ii][Ll][Ll][Uu][Mm][Ii][Nn][Aa][Tt][Ii][Oo][Nn]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CalibrationPhotodiodes_e" name="CalibrationPhotodiodes_e">
-  <annotation> <documentation> calibration photodiodes subsystem </documentation> </annotation>
+  <annotation> <documentation> calibration photodiodes entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Ii][Bb][Rr][Aa][Tt][Ii][Oo][Nn][Pp][Hh][Oo][Tt][Oo][Dd][Ii][Oo][Dd][Ee][Ss]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CalibrationSpectrograph_e" name="CalibrationSpectrograph_e">
-  <annotation> <documentation> calibration spectrograph subsystem </documentation> </annotation>
+  <annotation> <documentation> calibration spectrograph entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Ii][Bb][Rr][Aa][Tt][Ii][Oo][Nn][Ss][Pp][Ee][Cc][Tt][Rr][Oo][Gg][Rr][Aa][Pp][Hh]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CollimatedBeamProjector_e" name="CollimatedBeamProjector_e">
-  <annotation> <documentation> collimated beam projector subsystem </documentation> </annotation>
+  <annotation> <documentation> collimated beam projector entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Oo][Ll][Ll][Ii][Mm][Aa][Tt][Ee][Dd][Bb][Ee][Aa][Mm][Pp][Rr][Oo][Jj][Ee][Cc][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="VisibleAllSkyCamera_e" name="VisibleAllSkyCamera_e">
-  <annotation> <documentation> visible all sky camera subsystem </documentation> </annotation>
+  <annotation> <documentation> visible all sky camera entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Vv][Ii][Ss][Ii][Bb][Ll][Ee][Aa][Ll][Ll][Ss][Kk][Yy][Cc][Aa][Mm][Ee][Rr][Aa]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="InfraRedAllSkyCamera_e" name="InfraRedAllSkyCamera_e">
-  <annotation> <documentation> infra-red all sky camera subsystem </documentation> </annotation>
+  <annotation> <documentation> infra-red all sky camera entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ii][Nn][Ff][Rr][Aa][Rr][Ee][Dd][Aa][Ll][Ll][Ss][Kk][Yy][Cc][Aa][Mm][Ee][Rr][Aa]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="DIMM_e" name="DIMM_e">
-  <annotation> <documentation> differential image motion monitor subsystem </documentation> </annotation>
+  <annotation> <documentation> differential image motion monitor entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Dd][Ii][Mm][Mm]"/>
    <pattern value="[Dd][Ii][Ff][Ff][Ee][Rr][Ee][Nn][Tt][Ii][Aa][Ll][Ii][Mm][Aa][Gg][Ee][Mm][Oo][Tt][Ii][Oo][Nn][Mm][Oo][Nn][Ii][Tt][oO][Rr]"/>
@@ -515,126 +515,126 @@
  </simpleType>
 
  <simpleType id="DustMonitor_e" name="DustMonitor_e">
-  <annotation> <documentation> dust monitor subsystem </documentation> </annotation>
+  <annotation> <documentation> dust monitor entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Dd][Uu][Ss][Tt][Mm][Oo][Nn][Ii][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="EarthquakeDetector_e" name="EarthquakeDetector_e">
-  <annotation> <documentation> earthquake detector subsystem </documentation> </annotation>
+  <annotation> <documentation> earthquake detector entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ee][Aa][Rr][Tt][Hh][Qq][Uu][Aa][Kk][Ee][Dd][Ee][Tt][Ee][Cc][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LightningDetector_e" name="LightningDetector_e">
-  <annotation> <documentation> lightning detector subsystem </documentation> </annotation>
+  <annotation> <documentation> lightning detector entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ii][Gg][Hh][Tt][Nn][Ii][Nn][Gg][Dd][Ee][Tt][Ee][Cc][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="Camera_e" name="Camera_e">
-  <annotation> <documentation> camera subsystem </documentation> </annotation>
+  <annotation> <documentation> camera entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Mm][Ee][Rr][Aa]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="Archiver_e" name="Archiver_e">
-  <annotation> <documentation> archiver subsystem </documentation> </annotation>
+  <annotation> <documentation> archiver entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Rr][Cc][Hh][Ii][Vv][Ee][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CatchupArchiver_e" name="CatchupArchiver_e">
-  <annotation> <documentation> catchup archiver subsystem </documentation> </annotation>
+  <annotation> <documentation> catchup archiver entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Tt][Cc][Hh][Uu][Pp][Aa][Rr][Cc][Hh][Ii][Vv][Ee][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="ProcessingCluster_e" name="ProcessingCluster_e">
-  <annotation> <documentation> processing cluster subsystem </documentation> </annotation>
+  <annotation> <documentation> processing cluster entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Pp][Rr][Oo][Cc][Ee][Ss][Ss][Ii][Nn][Gg][Cc][Ll][Uu][Ss][Tt][Ee][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="EFDReplicator_e" name="EFDReplicator_e">
-  <annotation> <documentation> engineering facility database replicator subsystem </documentation> </annotation>
+  <annotation> <documentation> engineering facility database replicator entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ee][Ff][Dd][Rr][Ee][Pp][Ll][Ii][Cc][Aa][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="CalibrationGenerator_e" name="CalibrationGenerator_e">
-  <annotation> <documentation> calibration generator subsystem </documentation> </annotation>
+  <annotation> <documentation> calibration generator entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Ii][Bb][Rr][Aa][Tt][Ii][Oo][Nn][Gg][Ee][Nn][Ee][Rr][Aa][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="AirConditioning_e" name="AirConditioning_e">
-  <annotation> <documentation> air conditioning subsystem </documentation> </annotation>
+  <annotation> <documentation> air conditioning entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Aa][Ii][Rr][Cc][Oo][Nn][Dd][Ii][Tt][Ii][Oo][Nn][Ii][Nn][Gg]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="PowerConditioning_e" name="PowerConditioning_e">
-  <annotation> <documentation> power conditioning subsystem </documentation> </annotation>
+  <annotation> <documentation> power conditioning entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Pp][Oo][Ww][Ee][Rr][Cc][Oo][Nn][Dd][Ii][Tt][Ii][Oo][Nn][Ii][Nn][Gg]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LSSTEnclosure_e" name="LSSTEnclosure_e">
-  <annotation> <documentation> LSST enclosure subsystem </documentation> </annotation>
+  <annotation> <documentation> LSST enclosure entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ss][Ss][Tt][Ee][Nn][Cc][Ll][Oo][Ss][Uu][Rr][Ee]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LSSTMount_e" name="LSSTMount_e">
-  <annotation> <documentation> LSST mount subsystem </documentation> </annotation>
+  <annotation> <documentation> LSST mount entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ss][Ss][Tt][Mm][Oo][Uu][Nn][Tt]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LSSTHexapod_e" name="LSSTHexapod_e">
-  <annotation> <documentation> LSST hexapod subsystem </documentation> </annotation>
+  <annotation> <documentation> LSST hexapod entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ss][Ss][Tt][Hh][Ee][Xx][Aa][Pp][Oo][Dd]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LSSTRotator_e" name="LSSTRotator_e">
-  <annotation> <documentation> LSST rotator subsystem </documentation> </annotation>
+  <annotation> <documentation> LSST rotator entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ss][Ss][Tt][Rr][Oo][Tt][Aa][Tt][Oo][Rr]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="LSST_e" name="LSST_e">
-  <annotation> <documentation> LSST subsystem </documentation> </annotation>
+  <annotation> <documentation> LSST entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Ll][Ss][Ss][Tt]"/>
   </restriction>
  </simpleType>
 
  <simpleType id="Calypso_e" name="Calypso_e">
-  <annotation> <documentation> Calypso subsystem </documentation> </annotation>
+  <annotation> <documentation> Calypso entity </documentation> </annotation>
   <restriction base="string">
    <pattern value="[Cc][Aa][Ll][Yy][Pp][Ss][Oo]"/>
   </restriction>
  </simpleType>
 
- <simpleType id="Subsystem_e" name="Subsystem_e">
-  <annotation> <documentation> Defines all subsystems </documentation> </annotation>
+ <simpleType id="Entity_e" name="Entity_e">
+  <annotation> <documentation> Defines all entity </documentation> </annotation>
   <restriction base="string">
    <!-- Auxiliary Enclosure -->
    <pattern value="[Aa][Uu][Xx][Ii][Ll][Ii][Aa][Rr][Yy][Ee][Nn][Cc][Ll][Oo][Ss][Uu][Rr][Ee]"/>
@@ -718,7 +718,7 @@
    <element name="WindGate3" type="string" minOccurs="1" maxOccurs="1"/>
    <element name="WindGate4" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryEnclosure_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryEnclosure_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -730,7 +730,7 @@
   <sequence>
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -740,7 +740,7 @@
   <sequence>
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -754,7 +754,7 @@
    <element name="Science" type="ocs:Science_b" minOccurs="0" maxOccurs="1"/>
    <element name="Name" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -776,7 +776,7 @@
    <element name="ForcedAir" type="ocs:OnOff_e" minOccurs="1" maxOccurs="1"/>
    <element name="M1Cover" type="ocs:OpenClosed_e" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryMount_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryMount_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -788,7 +788,7 @@
   <sequence>
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -798,7 +798,7 @@
   <sequence>
    <element name="Name" type="ocs:Disperser_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -808,7 +808,7 @@
   <sequence>
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -822,7 +822,7 @@
    <element name="Science" type="ocs:Science_b" minOccurs="0" maxOccurs="1"/>
    <element name="Name" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:AuxiliaryImager_e" use="required"/>
+  <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -831,14 +831,14 @@
 
  <complexType id="cbpcsOff_c" name="cbpcsOff_c">
   <annotation> <documentation> cbpcsOff command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="cbpcsOn_c" name="cbpcsOn_c">
   <annotation> <documentation> cbpcsOn command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -848,7 +848,7 @@
   <sequence>
    <element name="Name" type="string"  minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -859,7 +859,7 @@
    <element name="Altitude" type="ocs:Altitude_t" minOccurs="1" maxOccurs="1"/>
    <element name="Azimuth" type="ocs:Azimuth_t" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -869,7 +869,7 @@
   <sequence>
    <element name="State" type="ocs:OpenClosed_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -881,7 +881,7 @@
    <element name="Tilt" type="ocs:TiltAngle_t" minOccurs="0" maxOccurs="1"/>
    <element name="Focus" type="ocs:Focus_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CollimatedBeamProjector_e" use="required"/>
+  <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -893,7 +893,7 @@
   <sequence>
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Camera_e" use="required"/>
+  <attribute name="Entity" type="ocs:Camera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -903,7 +903,7 @@
   <sequence>
    <element name="DeltaTime" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Camera_e" use="required"/>
+  <attribute name="Entity" type="ocs:Camera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -913,7 +913,7 @@
   <sequence>
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Camera_e" use="required"/>
+  <attribute name="Entity" type="ocs:Camera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -929,7 +929,7 @@
    <element name="WfsReadout" type="ocs:Wfs_b" minOccurs="0" maxOccurs="1"/>
    <element name="ImageSequenceName" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Camera_e" use="required"/>
+  <attribute name="Entity" type="ocs:Camera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -944,7 +944,7 @@
    <element name="Wavelength" type="ocs:WavelengthDouble_t" minOccurs="0" maxOccurs="1"/>
    <element name="BeamBlock" type="ocs:BeamBlock_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -954,7 +954,7 @@
   <sequence>
    <element name="Source" type="ocs:LaserLightSource_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -964,7 +964,7 @@
   <sequence>
    <element name="Source" type="ocs:LaserLightSource_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -976,7 +976,7 @@
    <element name="Position" type="ocs:LightPosition_e" minOccurs="0" maxOccurs="1"/>
    <element name="Shutter" type="ocs:Shutter_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -988,21 +988,21 @@
    <element name="Intensity" type="ocs:PerCentDouble_t" minOccurs="0" maxOccurs="1"/>
    <element name="BeamBlock" type="ocs:BeamBlock_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="cicsWhiteLightOff_c" name="cicsWhiteLightOff_c">
   <annotation> <documentation> cicsWhiteLightOff command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="cicsWhiteLightOn_c" name="cicsWhiteLightOn_c">
   <annotation> <documentation> cicsWhiteLightOn command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1014,7 +1014,7 @@
   <sequence>
    <element name="DiodeIDs" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationPhotodiodes_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1024,7 +1024,7 @@
   <sequence>
    <element name="DiodeIDs" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationPhotodiodes_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1035,21 +1035,21 @@
    <element name="ScanDuration" type="ocs:ScanDuration_t" minOccurs="0" maxOccurs="1"/>
    <element name="ScanUntil" type="ocs:ScanUntil_t" minOccurs="0" maxOccurs="1"/>
   </choice>
-  <attribute name="Subsystem" type="ocs:CalibrationPhotodiodes_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="cimsSEDOff_c" name="cimsSEDOff_c">
   <annotation> <documentation> cimsSEDOff command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CalibrationSpectrograph_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="cimsSEDOn_c" name="cimsSEDOn_c">
   <annotation> <documentation> cimsSEDOn command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:CalibrationSpectrograph_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1060,7 +1060,7 @@
    <element name="Tip" type="ocs:TipAngle_t" minOccurs="0" maxOccurs="1"/>
    <element name="Tilt" type="ocs:TiltAngle_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationSpectrograph_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1071,7 +1071,7 @@
    <element name="Wavelength" type="ocs:WavelengthDouble_t" minOccurs="0" maxOccurs="1"/>
    <element name="Resolution" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationSpectrograph_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1083,7 +1083,7 @@
   <sequence>
    <element name="Position" type="ocs:Position_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:CalibrationScreen_e" use="required"/>
+  <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1095,7 +1095,7 @@
   <sequence>
    <element name="Position" type="ocs:OpenClosed_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:DIMM_e" use="required"/>
+  <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1106,7 +1106,7 @@
    <element name="Altitude" type="ocs:Altitude_t" minOccurs="1" maxOccurs="1"/>
    <element name="Azimuth" type="ocs:Azimuth_t" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:DIMM_e" use="required"/>
+  <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1117,7 +1117,7 @@
    <element name="ExposureTime" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
    <element name="Frequency" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:DIMM_e" use="required"/>
+  <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1126,28 +1126,28 @@
 
  <complexType id="emcsIRASCamOn_c" name="emcsIRASCamOn_c">
   <annotation> <documentation> emcsIRASCamOn command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
+  <attribute name="Entity" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="emcsIRASCamOff_c" name="emcsIRASCamOff_c">
   <annotation> <documentation> emcsIRASCamOff command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
+  <attribute name="Entity" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="emcsVisASCamOn_c" name="emcsVisASCamOn_c">
   <annotation> <documentation> emcsVisASCamOn command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:VisibleAllSkyCamera_e" use="required"/>
+  <attribute name="Entity" type="ocs:VisibleAllSkyCamera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="emcsVisASCamOff_c" name="emcsVisASCamOff_c">
   <annotation> <documentation> emcsVisASCamOff command from LSE-139 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:VisibleAllSkyCamera_e" use="required"/>
+  <attribute name="Entity" type="ocs:VisibleAllSkyCamera_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1164,7 +1164,7 @@
    <element name="Dome" type="ocs:Dome_e" minOccurs="0" maxOccurs="1"/>
    <element name="Optics" type="ocs:Optics_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:LSST_e" use="required"/>
+  <attribute name="Entity" type="ocs:LSST_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1183,7 +1183,7 @@
    <element name="DomeOptions" type="ocs:Dome_e" minOccurs="0" maxOccurs="1"/>
    <element name="Optics" type="ocs:Optics_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:LSST_e" use="required"/>
+  <attribute name="Entity" type="ocs:LSST_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1196,35 +1196,35 @@
 
  <complexType id="Abort_c" name="Abort_c">
   <annotation> <documentation> Generic abort() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="Disable_c" name="Disable_c">
   <annotation> <documentation> Generic disable() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="Enable_c" name="Enable_c">
   <annotation> <documentation> Generic enable() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="EnterControl_c" name="EnterControl_c">
   <annotation> <documentation> Generic enterControl() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="ExitControl_c" name="ExitControl_c">
   <annotation> <documentation> Generic releasecontrol() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1235,7 +1235,7 @@
    <element name="Parameter" type="string" minOccurs="1" maxOccurs="1"/>
    <element name="Value" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1245,7 +1245,7 @@
   <sequence>
    <element name="StartId" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
@@ -1255,14 +1255,14 @@
   <sequence>
    <element name="Device" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>
 
  <complexType id="Standby_c" name="Standby_c">
   <annotation> <documentation> Generic unconfigure() command from LSE-209 </documentation> </annotation>
-  <attribute name="Subsystem" type="ocs:Subsystem_e" use="required"/>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
  </complexType>

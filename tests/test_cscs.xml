@@ -3,17 +3,17 @@
  <ocs:calibrationCommandSequence>
 
   <!-- cscsScreen command test -->
-  <ocs:cscsScreen Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cscsScreen Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Position>22.5</ocs:Position>
   </ocs:cscsScreen>
 
   <!-- cscsScreen command test -->
-  <ocs:cscsScreen Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cscsScreen Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Position>park</ocs:Position>
   </ocs:cscsScreen>
 
   <!-- cscsScreen command test -->
-  <ocs:cscsScreen Subsystem="CalibrationScreen" WaitForCompletion="true">
+  <ocs:cscsScreen Entity="CalibrationScreen" WaitForCompletion="true">
    <ocs:Position>normal</ocs:Position>
   </ocs:cscsScreen>
 

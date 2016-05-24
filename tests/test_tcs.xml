@@ -3,7 +3,7 @@
  <ocs:telescopeCommandSequence>
 
   <!-- tcsCalibration command test -->
-  <ocs:tcsCalibration Subsystem="LSST" WaitForCompletion="true">
+  <ocs:tcsCalibration Entity="LSST" WaitForCompletion="true">
    <ocs:Calibration>None</ocs:Calibration>
    <ocs:Elevation>45.5</ocs:Elevation>
    <ocs:Azimuth>192.6</ocs:Azimuth>
@@ -13,7 +13,7 @@
   </ocs:tcsCalibration>
 
   <!-- tcsTarget command test -->
-  <ocs:tcsTarget Subsystem="LSST" WaitForCompletion="true">
+  <ocs:tcsTarget Entity="LSST" WaitForCompletion="true">
    <ocs:AltAz>
     <ocs:Altitude>59.999</ocs:Altitude>
     <ocs:Azimuth>35.400</ocs:Azimuth>
@@ -27,7 +27,7 @@
   </ocs:tcsTarget>
 
   <!-- tcsTarget command test -->
-  <ocs:tcsTarget Subsystem="LSST" WaitForCompletion="true">
+  <ocs:tcsTarget Entity="LSST" WaitForCompletion="true">
    <ocs:J2000>
     <ocs:RightAscension>23:59:59.999</ocs:RightAscension>
     <ocs:Declination>35:59:15.400</ocs:Declination>

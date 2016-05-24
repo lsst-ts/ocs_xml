@@ -3,14 +3,14 @@
 
  <!-- tcsTarget (rotator=0.0) -->
  <ocs:telescopeCommandSequence>
-  <ocs:tcsTarget Subsystem="LSST" WaitForCompletion="true" RecordID="1">
+  <ocs:tcsTarget Entity="LSST" WaitForCompletion="true" RecordID="1">
    <ocs:Rotator>0.0</ocs:Rotator>
   </ocs:tcsTarget>
  </ocs:telescopeCommandSequence>
 
  <!-- ccsSetFilter -->
  <ocs:cameraCommandSequence>
-  <ocs:ccsSetFilter Subsystem="Camera" WaitForCompletion="true" RecordID="2">
+  <ocs:ccsSetFilter Entity="Camera" WaitForCompletion="true" RecordID="2">
    <ocs:Name>u</ocs:Name>
   </ocs:ccsSetFilter>
  </ocs:cameraCommandSequence>

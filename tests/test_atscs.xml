@@ -3,22 +3,22 @@
  <ocs:calibrationCommandSequence>
 
   <!-- atscsInitGuiders command test -->
-  <ocs:atscsInitGuiders Subsystem="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:atscsInitGuiders Entity="AuxiliaryImager" WaitForCompletion="true">
    <ocs:RoiSpec>undefined</ocs:RoiSpec>
   </ocs:atscsInitGuiders>
 
   <!-- atscsSetFilter command test -->
-  <ocs:atscsSetFilter Subsystem="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:atscsSetFilter Entity="AuxiliaryImager" WaitForCompletion="true">
     <ocs:Name>u</ocs:Name>
   </ocs:atscsSetFilter>
 
   <!-- atscsSetDisperser command test -->
-  <ocs:atscsSetDisperser Subsystem="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:atscsSetDisperser Entity="AuxiliaryImager" WaitForCompletion="true">
     <ocs:Name>red</ocs:Name>
   </ocs:atscsSetDisperser>
 
   <!-- atscsTakeImages command test -->
-  <ocs:atscsTakeImages Subsystem="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:atscsTakeImages Entity="AuxiliaryImager" WaitForCompletion="true">
     <ocs:NumberOfImages>2</ocs:NumberOfImages>
     <ocs:ExposureTime>15.0</ocs:ExposureTime>
     <ocs:Shutter>Open</ocs:Shutter>

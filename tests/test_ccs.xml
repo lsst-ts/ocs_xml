@@ -3,22 +3,22 @@
  <ocs:cameraCommandSequence>
 
   <!-- ccsInitGuiders command test -->
-  <ocs:ccsInitGuiders Subsystem="Camera" WaitForCompletion="true">
+  <ocs:ccsInitGuiders Entity="Camera" WaitForCompletion="true">
    <ocs:RoiSpec>placeholder</ocs:RoiSpec>
   </ocs:ccsInitGuiders>
 
   <!-- ccsInitImage command test -->
-  <ocs:ccsInitImage Subsystem="Camera" WaitForCompletion="true">
+  <ocs:ccsInitImage Entity="Camera" WaitForCompletion="true">
    <ocs:DeltaTime>12.2</ocs:DeltaTime>
   </ocs:ccsInitImage>
 
   <!-- ccsSetFilter command test -->
-  <ocs:ccsSetFilter Subsystem="Camera" WaitForCompletion="true">
+  <ocs:ccsSetFilter Entity="Camera" WaitForCompletion="true">
    <ocs:Name>g</ocs:Name>
   </ocs:ccsSetFilter>
 
   <!-- ccsTakeImages command test -->
-  <ocs:ccsTakeImages Subsystem="Camera" WaitForCompletion="true">
+  <ocs:ccsTakeImages Entity="Camera" WaitForCompletion="true">
    <ocs:NumberOfImages>2</ocs:NumberOfImages>
    <ocs:ExposureTime>15.0</ocs:ExposureTime>
    <ocs:ShutterCondition>true</ocs:ShutterCondition>

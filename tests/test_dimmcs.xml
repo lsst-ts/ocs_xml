@@ -3,18 +3,18 @@
  <ocs:calibrationCommandSequence>
 
   <!-- dimmcsEnclosure command test -->
-  <ocs:dimmcsEnclosure Subsystem="DIMM" WaitForCompletion="true">
+  <ocs:dimmcsEnclosure Entity="DIMM" WaitForCompletion="true">
    <ocs:Position>Open</ocs:Position>
   </ocs:dimmcsEnclosure>
 
   <!-- dimmcsTakeImages command test -->
-  <ocs:dimmcsTakeImages Subsystem="DIMM" WaitForCompletion="true">
+  <ocs:dimmcsTakeImages Entity="DIMM" WaitForCompletion="true">
    <ocs:ExposureTime>15.0</ocs:ExposureTime>
    <ocs:Frequency>10.0</ocs:Frequency>
   </ocs:dimmcsTakeImages>
 
   <!-- dimmcsTarget command test -->
-  <ocs:dimmcsTarget Subsystem="DIMM" WaitForCompletion="true">
+  <ocs:dimmcsTarget Entity="DIMM" WaitForCompletion="true">
    <ocs:Altitude>45.6</ocs:Altitude>
    <ocs:Azimuth>99.9</ocs:Azimuth>
   </ocs:dimmcsTarget>
