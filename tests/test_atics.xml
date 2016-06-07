@@ -3,17 +3,17 @@
  <ocs:calibrationCommandSequence>
 
   <!-- aticsInitGuiders command test -->
-  <ocs:aticsInitGuiders Entity="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:aticsInitGuiders Entity="AuxiliaryImager">
    <ocs:RoiSpec>undefined</ocs:RoiSpec>
   </ocs:aticsInitGuiders>
 
   <!-- aticsSetFilter command test -->
-  <ocs:aticsSetFilter Entity="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:aticsSetFilter Entity="AuxiliaryImager">
     <ocs:Name>u</ocs:Name>
   </ocs:aticsSetFilter>
 
   <!-- aticsTakeImages command test -->
-  <ocs:aticsTakeImages Entity="AuxiliaryImager" WaitForCompletion="true">
+  <ocs:aticsTakeImages Entity="AuxiliaryImager">
     <ocs:NumberOfImages>2</ocs:NumberOfImages>
     <ocs:ExposureTime>15.0</ocs:ExposureTime>
     <ocs:Shutter>Open</ocs:Shutter>

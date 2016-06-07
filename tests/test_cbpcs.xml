@@ -3,35 +3,35 @@
  <ocs:calibrationCommandSequence>
 
   <!-- cbpcsOn command test -->
-  <ocs:cbpcsOn Entity="CollimatedBeamProjector" WaitForCompletion="true" />
+  <ocs:cbpcsOn Entity="CollimatedBeamProjector"/>
 
   <!-- cbpcsOff command test -->
-  <ocs:cbpcsOff Entity="CollimatedBeamProjector" WaitForCompletion="true" />
+  <ocs:cbpcsOff Entity="CollimatedBeamProjector"/>
 
   <!-- cbpcsShutter command test -->
-  <ocs:cbpcsShutter Entity="CollimatedBeamProjector" WaitForCompletion="true">
+  <ocs:cbpcsShutter Entity="CollimatedBeamProjector">
    <ocs:State>Open</ocs:State>
   </ocs:cbpcsShutter>
 
   <!-- cbpcsShutter command test -->
-  <ocs:cbpcsShutter Entity="CollimatedBeamProjector" WaitForCompletion="true">
+  <ocs:cbpcsShutter Entity="CollimatedBeamProjector">
    <ocs:State>Closed</ocs:State>
   </ocs:cbpcsShutter>
 
   <!-- cbpcsMaskWheel command test -->
-  <ocs:cbpcsMaskWheel Entity="CollimatedBeamProjector" WaitForCompletion="true">
+  <ocs:cbpcsMaskWheel Entity="CollimatedBeamProjector">
    <ocs:Name>MaskWheelNumber3</ocs:Name>
   </ocs:cbpcsMaskWheel>
 
   <!-- cbpcsStage command test -->
-  <ocs:cbpcsStage Entity="CollimatedBeamProjector" WaitForCompletion="true">
+  <ocs:cbpcsStage Entity="CollimatedBeamProjector">
    <ocs:Tip>13.5</ocs:Tip>
    <ocs:Tilt>29.6</ocs:Tilt>
    <ocs:Focus>98.9</ocs:Focus>
   </ocs:cbpcsStage>
 
   <!-- cbpcsMount command test -->
-  <ocs:cbpcsMount Entity="CollimatedBeamProjector" WaitForCompletion="true">
+  <ocs:cbpcsMount Entity="CollimatedBeamProjector">
    <ocs:Altitude>45.5</ocs:Altitude>
    <ocs:Azimuth>-111.6</ocs:Azimuth>
   </ocs:cbpcsMount>

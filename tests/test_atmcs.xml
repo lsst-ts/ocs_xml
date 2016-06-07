@@ -3,7 +3,7 @@
  <ocs:calibrationCommandSequence>
 
   <!-- atmcsATTelescope command test -->
-  <ocs:atmcsATTelescope Entity="AuxiliaryMount" WaitForCompletion="true">
+  <ocs:atmcsATTelescope Entity="AuxiliaryMount">
    <ocs:Azimuth>13.5</ocs:Azimuth>
    <ocs:Altitude>29.6</ocs:Altitude>
    <ocs:Hexapod>undefined</ocs:Hexapod>

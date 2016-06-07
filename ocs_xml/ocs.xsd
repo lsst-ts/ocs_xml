@@ -6,7 +6,7 @@
   targetNamespace="http://project.lsst.org/ts"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified"
-  version="20160415">
+  version="20160607">
 
  <annotation>
   <documentation>
@@ -15,8 +15,17 @@
     Philip N. Daly (pdaly@lsst.org)
    Change Record:
     15-Apr-2016: Original version (pdaly@lsst.org)
+    07-Jun-2016: Decprecated "WaitForCompletion" attribute (pdaly@lsst.org)
+    07-Jun-2016: Decprecated "RecordID" attribute (pdaly@lsst.org)
+    07-Jun-2016: Deleted "abort" command from generic set (pdaly@lsst.org)
+    07-Jun-2016: Deleted "stop" command from generic set (pdaly@lsst.org)
+    07-Jun-2016: Added "abort" command to business logic set (pdaly@lsst.org)
+    07-Jun-2016: Added "stop" command to business logic set (pdaly@lsst.org)
+    07-Jun-2016: Added "Timeout" attribute (pdaly@lsst.org)
+    07-Jun-2016: Added "waitForEvents" command to script set (pdaly@lsst.org)
    Validation Test:
     15-Apr-2016: Validated via validome.org and installed on project.lsst.org (pdaly@lsst.org)
+    07-Jun-2016: Validated via validome.org and installed on project.lsst.org (pdaly@lsst.org)
    Copyright (c) 2016 AURA Inc. All rights reserved, Released under the GPL.
   </documentation>
  </annotation>
@@ -49,10 +58,12 @@
   <restriction base="boolean"/>
  </simpleType>
 
- <simpleType id="WaitForCompletion_b" name="WaitForCompletion_b">
-  <annotation> <documentation> Script wait for completion directive </documentation> </annotation>
-  <restriction base="boolean"/>
- </simpleType>
+ <!-- DEPRECATED
+  <simpleType id="WaitForCompletion_b" name="WaitForCompletion_b">
+   <annotation> <documentation> Script wait for completion directive </documentation> </annotation>
+   <restriction base="boolean"/>
+  </simpleType>
+ -->
 
  <simpleType id="Wfs_b" name="Wfs_b">
   <annotation> <documentation> Wavefront detector(s) state during an integration </documentation> </annotation>
@@ -223,6 +234,7 @@
  <simpleType id="ScriptSource_e" name="ScriptSource_e">
   <annotation> <documentation> Identifying source of script </documentation> </annotation>
   <restriction base="string">
+   <pattern value="[Tt][Ee][Mm][Pp][Ll][Aa][Tt][Ee]"/>
    <pattern value="[Ww][Ee][Bb][Ff][Oo][Rr][Mm]"/>
    <pattern value="[Ss][Cc][Hh][Ee][Dd][Uu][Ll][Ee][Rr]"/>
   </restriction>
@@ -423,7 +435,7 @@
 
  <!--
   #+
-  #  Section 2: Entitys
+  #  Section 2: Entities
   #-
  -->
 
@@ -719,8 +731,11 @@
    <element name="WindGate4" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryEnclosure_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- atics -->
@@ -731,8 +746,11 @@
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="aticsSetFilter_c" name="aticsSetFilter_c">
@@ -741,8 +759,11 @@
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="aticsTakeImages_c" name="aticsTakeImages_c">
@@ -755,8 +776,11 @@
    <element name="Name" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- atmcs -->
@@ -777,8 +801,11 @@
    <element name="M1Cover" type="ocs:OpenClosed_e" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryMount_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- atscs -->
@@ -789,8 +816,10 @@
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="atscsSetDisperser_c" name="atscsSetDisperser_c">
@@ -799,8 +828,11 @@
    <element name="Name" type="ocs:Disperser_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="atscsSetFilter_c" name="atscsSetFilter_c">
@@ -809,8 +841,11 @@
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="atscsTakeImages_c" name="atscsTakeImages_c">
@@ -823,8 +858,11 @@
    <element name="Name" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:AuxiliaryImager_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- cbpcs -->
@@ -832,15 +870,21 @@
  <complexType id="cbpcsOff_c" name="cbpcsOff_c">
   <annotation> <documentation> cbpcsOff command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cbpcsOn_c" name="cbpcsOn_c">
   <annotation> <documentation> cbpcsOn command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cbpcsMaskWheel_c" name="cbpcsMaskWheel_c">
@@ -849,8 +893,11 @@
    <element name="Name" type="string"  minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cbpcsMount_c" name="cbpcsMount_c">
@@ -860,8 +907,11 @@
    <element name="Azimuth" type="ocs:Azimuth_t" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cbpcsShutter_c" name="cbpcsShutter_c">
@@ -870,8 +920,11 @@
    <element name="State" type="ocs:OpenClosed_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cbpcsStage_c" name="cbpcsStage_c">
@@ -882,8 +935,11 @@
    <element name="Focus" type="ocs:Focus_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CollimatedBeamProjector_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- ccs -->
@@ -894,8 +950,11 @@
    <element name="RoiSpec" type="anyURI" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Camera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="ccsInitImage_c" name="ccsInitImage_c">
@@ -904,8 +963,11 @@
    <element name="DeltaTime" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Camera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="ccsSetFilter_c" name="ccsSetFilter_c">
@@ -914,8 +976,11 @@
    <element name="Name" type="ocs:Filter_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Camera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="ccsTakeImages_c" name="ccsTakeImages_c">
@@ -930,8 +995,11 @@
    <element name="ImageSequenceName" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Camera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- cics -->
@@ -945,8 +1013,11 @@
    <element name="BeamBlock" type="ocs:BeamBlock_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsLaserLightOff_c" name="cicsLaserLightOff_c">
@@ -955,8 +1026,11 @@
    <element name="Source" type="ocs:LaserLightSource_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsLaserLightOn_c" name="cicsLaserLightOn_c">
@@ -965,8 +1039,11 @@
    <element name="Source" type="ocs:LaserLightSource_e"  minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsLightControl_c" name="cicsLightControl_c">
@@ -977,8 +1054,11 @@
    <element name="Shutter" type="ocs:Shutter_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsWhiteLight_c" name="cicsWhiteLight_c">
@@ -989,22 +1069,31 @@
    <element name="BeamBlock" type="ocs:BeamBlock_b" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsWhiteLightOff_c" name="cicsWhiteLightOff_c">
   <annotation> <documentation> cicsWhiteLightOff command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cicsWhiteLightOn_c" name="cicsWhiteLightOn_c">
   <annotation> <documentation> cicsWhiteLightOn command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- cims -->
@@ -1015,8 +1104,11 @@
    <element name="DiodeIDs" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsDiodeControllerOn_c" name="cimsDiodeControllerOn_c">
@@ -1025,8 +1117,11 @@
    <element name="DiodeIDs" type="string" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsScanDiode_c" name="cimsScanDiode_c">
@@ -1036,22 +1131,31 @@
    <element name="ScanUntil" type="ocs:ScanUntil_t" minOccurs="0" maxOccurs="1"/>
   </choice>
   <attribute name="Entity" type="ocs:CalibrationPhotodiodes_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsSEDOff_c" name="cimsSEDOff_c">
   <annotation> <documentation> cimsSEDOff command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsSEDOn_c" name="cimsSEDOn_c">
   <annotation> <documentation> cimsSEDOn command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsSEDPosition_c" name="cimsSEDPosition_c">
@@ -1061,8 +1165,11 @@
    <element name="Tilt" type="ocs:TiltAngle_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="cimsSEDStartScan_c" name="cimsSEDStartScan_c">
@@ -1072,8 +1179,11 @@
    <element name="Resolution" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationSpectrograph_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- cscs -->
@@ -1084,8 +1194,11 @@
    <element name="Position" type="ocs:Position_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:CalibrationScreen_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- dimmcs -->
@@ -1096,8 +1209,11 @@
    <element name="Position" type="ocs:OpenClosed_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="dimmcsTarget_c" name="dimmcsTarget_c">
@@ -1107,8 +1223,11 @@
    <element name="Azimuth" type="ocs:Azimuth_t" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="dimmcsTakeImages_c" name="dimmcsTakeImages_c">
@@ -1118,8 +1237,11 @@
    <element name="Frequency" type="ocs:PositiveDouble_t" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:DIMM_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- emcs -->
@@ -1127,29 +1249,41 @@
  <complexType id="emcsIRASCamOn_c" name="emcsIRASCamOn_c">
   <annotation> <documentation> emcsIRASCamOn command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="emcsIRASCamOff_c" name="emcsIRASCamOff_c">
   <annotation> <documentation> emcsIRASCamOff command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:InfraRedAllSkyCamera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="emcsVisASCamOn_c" name="emcsVisASCamOn_c">
   <annotation> <documentation> emcsVisASCamOn command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:VisibleAllSkyCamera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="emcsVisASCamOff_c" name="emcsVisASCamOff_c">
   <annotation> <documentation> emcsVisASCamOff command from LSE-139 </documentation> </annotation>
   <attribute name="Entity" type="ocs:VisibleAllSkyCamera_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!-- tcs -->
@@ -1165,8 +1299,11 @@
    <element name="Optics" type="ocs:Optics_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:LSST_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="tcsTarget_c" name="tcsTarget_c">
@@ -1184,49 +1321,86 @@
    <element name="Optics" type="ocs:Optics_e" minOccurs="0" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:LSST_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!--
   #+
-  #  Section 4: Generic Commands(s)
+  #  Section 4: Business Logic Commands(s)
   #-
  -->
 
  <complexType id="Abort_c" name="Abort_c">
   <annotation> <documentation> Generic abort() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
+
+ <complexType id="Stop_c" name="Stop_c">
+  <annotation> <documentation> Generic stop() command from LSE-209 </documentation> </annotation>
+  <sequence>
+   <element name="Device" type="string" minOccurs="1" maxOccurs="1"/>
+  </sequence>
+  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
+ </complexType>
+
+ <!--
+  #+
+  #  Section 5: Generic Commands(s)
+  #-
+ -->
 
  <complexType id="Disable_c" name="Disable_c">
   <annotation> <documentation> Generic disable() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="Enable_c" name="Enable_c">
   <annotation> <documentation> Generic enable() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="EnterControl_c" name="EnterControl_c">
   <annotation> <documentation> Generic enterControl() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="ExitControl_c" name="ExitControl_c">
   <annotation> <documentation> Generic releasecontrol() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="SetValue_c" name="SetValue_c">
@@ -1236,8 +1410,11 @@
    <element name="Value" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="Start_c" name="Start_c">
@@ -1246,32 +1423,56 @@
    <element name="StartId" type="string" minOccurs="1" maxOccurs="1"/>
   </sequence>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
- </complexType>
-
- <complexType id="Stop_c" name="Stop_c">
-  <annotation> <documentation> Generic stop() command from LSE-209 </documentation> </annotation>
-  <sequence>
-   <element name="Device" type="string" minOccurs="1" maxOccurs="1"/>
-  </sequence>
-  <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <complexType id="Standby_c" name="Standby_c">
   <annotation> <documentation> Generic unconfigure() command from LSE-209 </documentation> </annotation>
   <attribute name="Entity" type="ocs:Entity_e" use="required"/>
-  <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
-  <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
  </complexType>
 
  <!--
   #+
-  #  Section 5: Command Record(s)
+  #  Section 6: Script Commands(s)
   #-
  -->
+
+ <complexType id="WaitForEvents_c" name="WaitForEvents_c">
+  <annotation> <documentation> Scripting waitForEvents() command from LTS-237 </documentation> </annotation>
+  <sequence>
+   <element name="Events" type="string" minOccurs="1" maxOccurs="1"/>
+  </sequence>
+  <attribute name="Timeout" type="ocs:PositiveLong_t" use="optional"/>
+  <!-- DEPRECATED
+   <attribute name="WaitForCompletion" type="ocs:WaitForCompletion_b" use="required"/>
+   <attribute name="RecordID" type="ocs:PositiveLong_t" use="optional"/>
+  -->
+ </complexType>
+
+ <!--
+  #+
+  #  Section 7: Command Record(s)
+  #-
+ -->
+
+ <complexType id="businessLogicCommand_s" name="businessLogicCommand_s">
+  <annotation> <documentation> Business logic command sequence </documentation> </annotation>
+  <sequence>
+   <choice minOccurs="0" maxOccurs="unbounded">
+    <element name="abort" type="ocs:Abort_c" minOccurs="0" maxOccurs="1"/>
+    <element name="stop" type="ocs:Stop_c" minOccurs="0" maxOccurs="1"/>
+   </choice>
+  </sequence>
+ </complexType>
 
  <complexType id="cameraCommand_s" name="cameraCommand_s">
   <annotation> <documentation> Camera command sequence </documentation> </annotation>
@@ -1334,7 +1535,6 @@
   <annotation> <documentation> Generic command sequence </documentation> </annotation>
   <sequence>
    <choice minOccurs="0" maxOccurs="unbounded">
-    <element name="abort" type="ocs:Abort_c" minOccurs="0" maxOccurs="1"/>
     <element name="disable" type="ocs:Disable_c" minOccurs="0" maxOccurs="1"/>
     <element name="enable" type="ocs:Enable_c" minOccurs="0" maxOccurs="1"/>
     <element name="entercontrol" type="ocs:EnterControl_c" minOccurs="0" maxOccurs="1"/>
@@ -1342,8 +1542,14 @@
     <element name="setvalue" type="ocs:SetValue_c" minOccurs="0" maxOccurs="1"/>
     <element name="standby" type="ocs:Standby_c" minOccurs="0" maxOccurs="1"/>
     <element name="start" type="ocs:Start_c" minOccurs="0" maxOccurs="1"/>
-    <element name="stop" type="ocs:Stop_c" minOccurs="0" maxOccurs="1"/>
    </choice>
+  </sequence>
+ </complexType>
+
+ <complexType id="scriptCommand_s" name="scriptCommand_s">
+  <annotation> <documentation> Script command sequence </documentation> </annotation>
+  <sequence>
+    <element name="waitForEvents" type="ocs:WaitForEvents_c" minOccurs="0" maxOccurs="1"/>
   </sequence>
  </complexType>
 
@@ -1361,10 +1567,12 @@
   <annotation> <documentation> OCS command sequence </documentation> </annotation>
   <sequence>
    <choice minOccurs="1" maxOccurs="unbounded">
+    <element name="businessLogicCommandSequence" type="ocs:businessLogicCommand_s" minOccurs="0" maxOccurs="unbounded"/>
     <element name="genericCommandSequence" type="ocs:genericCommand_s" minOccurs="0" maxOccurs="unbounded"/>
-    <element name="cameraCommandSequence" type="ocs:cameraCommand_s" minOccurs="0" maxOccurs="unbounded"/>
-    <element name="telescopeCommandSequence" type="ocs:telescopeCommand_s" minOccurs="0" maxOccurs="unbounded"/>
     <element name="calibrationCommandSequence" type="ocs:calibrationCommand_s" minOccurs="0" maxOccurs="unbounded"/>
+    <element name="cameraCommandSequence" type="ocs:cameraCommand_s" minOccurs="0" maxOccurs="unbounded"/>
+    <element name="scriptCommandSequence" type="ocs:scriptCommand_s" minOccurs="0" maxOccurs="unbounded"/>
+    <element name="telescopeCommandSequence" type="ocs:telescopeCommand_s" minOccurs="0" maxOccurs="unbounded"/>
    </choice>
   </sequence>
   <attribute name="Date" type="dateTime" use="required"/>

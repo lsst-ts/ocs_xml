@@ -3,16 +3,16 @@
  <ocs:calibrationCommandSequence>
 
   <!-- emcsVisASCamOn command test -->
-  <ocs:emcsVisASCamOn Entity="VisibleAllSkyCamera" WaitForCompletion="true"/>
+  <ocs:emcsVisASCamOn Entity="VisibleAllSkyCamera"/>
 
   <!-- emcsVisASCamOff command test -->
-  <ocs:emcsVisASCamOff Entity="VisibleAllSkyCamera" WaitForCompletion="true"/>
+  <ocs:emcsVisASCamOff Entity="VisibleAllSkyCamera"/>
 
   <!-- emcsIRASCamOn command test -->
-  <ocs:emcsIRASCamOn Entity="InfraRedAllSkyCamera" WaitForCompletion="true"/>
+  <ocs:emcsIRASCamOn Entity="InfraRedAllSkyCamera"/>
 
   <!-- emcsIRASCamOff command test -->
-  <ocs:emcsIRASCamOff Entity="InfraRedAllSkyCamera" WaitForCompletion="true"/>
+  <ocs:emcsIRASCamOff Entity="InfraRedAllSkyCamera"/>
 
  </ocs:calibrationCommandSequence>
 </ocs:ocsCommandSequence>

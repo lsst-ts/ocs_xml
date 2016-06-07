@@ -3,7 +3,7 @@
  <ocs:calibrationCommandSequence>
 
   <!-- atecsATEnclosure command test -->
-  <ocs:atecsATEnclosure Entity="AuxiliaryEnclosure" WaitForCompletion="true">
+  <ocs:atecsATEnclosure Entity="AuxiliaryEnclosure">
    <ocs:Azimuth>13.5</ocs:Azimuth>
    <ocs:LowerShutter>Open</ocs:LowerShutter>
    <ocs:UpperShutter>Open</ocs:UpperShutter>

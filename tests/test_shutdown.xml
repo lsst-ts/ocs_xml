@@ -1,55 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ocs:ocsCommandSequence xmlns:ocs="http://project.lsst.org/ts" Date="2016-02-09T08:40:51.678" OnError="Continue">
 
- <!-- one way of doing it -->
+ <!-- disable command(s) -->
  <ocs:genericCommandSequence>
-
-  <!-- disable command test -->
-  <ocs:disable Entity="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:disable Entity="Camera" WaitForCompletion="false"/>
-  <ocs:disable Entity="LSSTMount" WaitForCompletion="false"/>
-  <!-- synchronization point: TBD -->
-
-  <!-- standby command test -->
-  <ocs:standby Entity="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:standby Entity="Camera" WaitForCompletion="false"/>
-  <ocs:standby Entity="LSSTMount" WaitForCompletion="false"/>
-  <!-- synchronization point: TBD -->
-
-  <!-- exit control command test -->
-  <ocs:exitcontrol Entity="AuxiliaryMount" WaitForCompletion="false"/>
-  <ocs:exitcontrol Entity="Camera" WaitForCompletion="false"/>
-  <ocs:exitcontrol Entity="LSSTMount" WaitForCompletion="false"/>
-
+  <ocs:disable Entity="AuxiliaryMount"/>
+  <ocs:disable Entity="Camera"/>
+  <ocs:disable Entity="LSSTMount"/>
  </ocs:genericCommandSequence>
 
- <!-- another way of doing it -->
+ <!-- synchronization point -->
+ <ocs:scriptCommandSequence>
+  <ocs:waitForEvents Timeout="120">
+   <ocs:Events>auxiliaryMountDisabled,cameraDisabled,LSSTMountDisabled</ocs:Events>
+  </ocs:waitForEvents>
+ </ocs:scriptCommandSequence>
+
+ <!-- standby command(s) -->
  <ocs:genericCommandSequence>
-
-  <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Entity="Archiver" WaitForCompletion="true"/>
-  <ocs:standby Entity="Archiver" WaitForCompletion="true"/>
-  <ocs:exitcontrol Entity="Archiver" WaitForCompletion="true"/>
-
-  <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Entity="CatchupArchiver" WaitForCompletion="true"/>
-  <ocs:standby Entity="CatchupArchiver" WaitForCompletion="true"/>
-  <ocs:exitcontrol Entity="CatchupArchiver" WaitForCompletion="true"/>
-
-  <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Entity="ProcessingCluster" WaitForCompletion="true"/>
-  <ocs:standby Entity="ProcessingCluster" WaitForCompletion="true"/>
-  <ocs:exitcontrol Entity="ProcessingCluster" WaitForCompletion="true"/>
-
-  <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Entity="EFDReplicator" WaitForCompletion="true"/>
-  <ocs:standby Entity="EFDReplicator" WaitForCompletion="true"/>
-  <ocs:exitcontrol Entity="EFDReplicator" WaitForCompletion="true"/>
-
-  <!-- disable, standby and exitcontrol command test -->
-  <ocs:disable Entity="CalibrationGenerator" WaitForCompletion="true"/>
-  <ocs:standby Entity="CalibrationGenerator" WaitForCompletion="true"/>
-  <ocs:exitcontrol Entity="CalibrationGenerator" WaitForCompletion="true"/>
-
+  <ocs:standby Entity="AuxiliaryMount"/>
+  <ocs:standby Entity="Camera"/>
+  <ocs:standby Entity="LSSTMount"/>
  </ocs:genericCommandSequence>
+
+ <!-- synchronization point -->
+ <ocs:scriptCommandSequence>
+  <ocs:waitForEvents Timeout="120">
+   <ocs:Events>auxiliaryMountStandby,cameraStandby,LSSTMountStandby</ocs:Events>
+  </ocs:waitForEvents>
+ </ocs:scriptCommandSequence>
+
+ <!-- exitcontrol command(s) -->
+ <ocs:genericCommandSequence>
+  <ocs:exitcontrol Entity="AuxiliaryMount"/>
+  <ocs:exitcontrol Entity="Camera"/>
+  <ocs:exitcontrol Entity="LSSTMount"/>
+ </ocs:genericCommandSequence>
+
+ <!-- synchronization point -->
+ <ocs:scriptCommandSequence>
+  <ocs:waitForEvents Timeout="120">
+   <ocs:Events>auxiliaryMountOffline,cameraOffline,LSSTMountOffline</ocs:Events>
+  </ocs:waitForEvents>
+ </ocs:scriptCommandSequence>
+
 </ocs:ocsCommandSequence>
